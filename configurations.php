@@ -25,6 +25,19 @@ php artisan make:auth
 php artisan migrate
 // If you want to run your project from the server run this command: 
 php artisan serve
-// the server should give you a link, in our case: 127.0.0.1:8000
+// The server should give you a link, in our case: 127.0.0.1:8000
+
+
+// To migrate the your table to the database: 
+php artisan make:model Table_
+// It's recommanded to make the model name starts with capital case.
+
+
+//To create a migration: 
+php artisan make:migration mytable -create=table_s
+// It's recommanded to make the table name the same as the model name, and make it ends with 's'
+
+// If you want to migrate the tables: 
+php artisan migrate
 
 ?>
